@@ -21,6 +21,7 @@ Foram implementados cenários automatizados para:
  - GitHub
    
 📁 Estrutura do Projeto
+
 automation/
 │
 ├── evidencias/
