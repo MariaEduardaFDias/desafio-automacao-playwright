@@ -23,27 +23,7 @@ Foram implementados cenários automatizados para:
   
 📁 Estrutura do Projeto
 
-automation/
-│
-├── evidencias/
-│   ├── login-sucesso.png
-│   ├── produto-carrinho.png
-│   └── checkout-resumo.png
-│
-├── pages/
-│   ├── LoginPage.ts
-│   ├── InventoryPage.ts
-│   ├── CartPage.ts
-│   └── CheckoutPage.ts
-│
-├── tests/
-│   ├── login.spec.ts
-│   ├── cart.spec.ts
-│   └── checkout.spec.ts
-│
-├── package.json
-├── playwright.config.ts
-└── README.md
+
 
 -----------------------------
 
