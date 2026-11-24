@@ -1,29 +1,23 @@
- Projeto de Automação de Testes - SauceDemo
-Automação de testes E2E utilizando Playwright, TypeScript e o padrão Page Object Model (POM).
+# Desafio de Automação de Testes – SauceDemo
 
-Descrição
-Este projeto foi desenvolvido para validar fluxos críticos da aplicação SauceDemo.
+Projeto de automação de testes End-to-End (E2E) desenvolvido com **Playwright**, **TypeScript** e o padrão de arquitetura **Page Object Model (POM)**, utilizando a aplicação [SauceDemo](https://www.saucedemo.com/).
 
-Foram implementados cenários automatizados para:
+## Objetivo do Projeto
 
- - Login de usuário
- - Adição de produtos ao carrinho
- - Validação do checkout
- - Verificação do resumo da compra
+Desenvolver uma estrutura básica de automação de testes para validar os principais fluxos da aplicação, contemplando autenticação, gerenciamento do carrinho e validação das informações do checkout.
 
-Tecnologias Utilizadas:
+## Tecnologias Utilizadas
 
- - Node.js
- - TypeScript
- - Playwright
- - Page Object Model (POM)
- - Git
- - GitHub
- -----------------------------
-  
- Estrutura do Projeto
+- Node.js
+- TypeScript
+- Playwright
+- Page Object Model (POM)
+- Git e GitHub
 
-automation/
+## Estrutura do Projeto
+
+```text
+desafio-automacao-playwright/
 │
 ├── evidencias/
 │   ├── login-sucesso.png
@@ -44,76 +38,106 @@ automation/
 ├── package.json
 ├── playwright.config.ts
 └── README.md
+```
 
+## Cenários Automatizados
 
------------------------------
+### 1. Login com sucesso
 
+- Acessar a aplicação SauceDemo.
+- Informar credenciais válidas.
+- Validar o redirecionamento para a página de produtos.
+- Verificar a apresentação do título e dos produtos disponíveis.
 
-Casos de Teste Implementados
+### 2. Adição de produto ao carrinho
 
-Login
-Login com credenciais válidas
-Redirecionamento para página de produtos
+- Realizar login na aplicação.
+- Selecionar o produto Sauce Labs Backpack.
+- Capturar o preço do produto antes da inclusão.
+- Adicionar o produto ao carrinho.
+- Validar a quantidade de itens no indicador do carrinho.
+- Acessar o carrinho.
+- Verificar o nome e o preço do produto adicionado.
 
-Carrinho
-Adicionar produto ao carrinho
-Validar quantidade de itens
+### 3. Validação das informações no checkout
 
-Checkout
-Preencher informações do cliente
-Validar resumo do pedido
-Finalizar compra com sucesso
+- Realizar login na aplicação.
+- Adicionar o produto Sauce Labs Backpack ao carrinho.
+- Prosseguir para o checkout.
+- Preencher as informações do cliente.
+- Validar o redirecionamento para a tela de resumo do pedido.
+- Verificar o nome e o preço do produto.
+- Validar as informações de pagamento e entrega.
+- Conferir o subtotal, a taxa e o valor total.
+- Verificar se o valor total corresponde à soma do subtotal com a taxa.
 
------------------------------
+## Aplicação do Page Object Model (POM)
 
-Como Executar os Testes
+O projeto utiliza o padrão Page Object Model para separar os elementos e as ações de cada página da aplicação da lógica dos testes.
 
-Clonar o projeto
+Cada classe possui responsabilidades específicas:
+
+- **LoginPage:** elementos e ações relacionados à autenticação.
+- **InventoryPage:** interação com os produtos e o carrinho.
+- **CartPage:** validações e ações relacionadas ao carrinho.
+- **CheckoutPage:** preenchimento de informações e validações do checkout.
+
+Essa organização facilita a manutenção, a reutilização de métodos e a legibilidade dos testes automatizados.
+
+## Como Executar o Projeto
+
+### 1. Clonar o repositório
+
+```bash
 git clone https://github.com/MariaEduardaFDias/desafio-automacao-playwright.git
+```
 
-Entrar na pasta
+### 2. Acessar a pasta do projeto
+
+```bash
 cd desafio-automacao-playwright
+```
 
-Instalar dependências
+### 3. Instalar as dependências
+
+```bash
 npm install
+```
 
-Instalar navegadores do Playwright
+### 4. Instalar os navegadores do Playwright
+
+```bash
 npx playwright install
+```
 
-Executar os testes
+### 5. Executar todos os testes
+
+```bash
 npx playwright test
+```
 
------------------------------
+### 6. Visualizar o relatório de execução
 
-Resultado dos Testes
+```bash
+npx playwright show-report
+```
 
-Login funcionando
+## Evidências dos Testes
 
-Carrinho funcionando
+As evidências das execuções estão organizadas na pasta `evidencias/`, contendo registros dos seguintes cenários:
 
-Checkout funcionando
+- **Login:** evidência da autenticação realizada com sucesso.
+- **Carrinho:** evidência da inclusão e validação do produto.
+- **Checkout:** evidência da validação do resumo do pedido.
 
-Todos os testes executando com sucesso
+## Considerações Finais
 
------------------------------
+O projeto foi desenvolvido com o objetivo de aplicar conceitos de automação de testes E2E, organização de código utilizando Page Object Model e validação de funcionalidades de uma aplicação web.
 
-📸 Evidências
-As evidências dos testes estão disponíveis na pasta:
+A implementação contempla os fluxos de login, adição de produto ao carrinho e validação das informações apresentadas no checkout.
 
-evidencias/
-Login
-Login
+---
 
-Carrinho
-Carrinho
+**Autora:** Maria Eduarda Dias
 
-Checkout
-Checkout
-
------------------------------
-
-
-Autora
-Maria Eduarda Dias
-
-GitHub: 👉 https://github.com/MariaEduardaFDias
+**GitHub:** [MariaEduardaFDias](https://github.com/MariaEduardaFDias)
