@@ -19,7 +19,8 @@ Foram implementados cenários automatizados para:
  - Page Object Model (POM)
  - Git
  - GitHub
-   
+ -----------------------------
+  
 📁 Estrutura do Projeto
 
 automation/
@@ -44,34 +45,46 @@ automation/
 ├── playwright.config.ts
 └── README.md
 
+-----------------------------
+
 ✅ Casos de Teste Implementados
 
 🔐 Login
 Login com credenciais válidas
 Redirecionamento para página de produtos
+
 🛒 Carrinho
 Adicionar produto ao carrinho
 Validar quantidade de itens
 
 📦 Checkout
-
 Preencher informações do cliente
 Validar resumo do pedido
 Finalizar compra com sucesso
+
+-----------------------------
 
 🚀 Como Executar os Testes
 
 1️⃣ Clonar o projeto
 git clone https://github.com/MariaEduardaFDias/desafio-automacao-playwright.git
+
 2️⃣ Entrar na pasta
 cd desafio-automacao-playwright
+
 3️⃣ Instalar dependências
 npm install
+
 4️⃣ Instalar navegadores do Playwright
 npx playwright install
+
 5️⃣ Executar os testes
 npx playwright test
+
+-----------------------------
+
 📊 Resultado dos Testes
+
 ✅ Login funcionando
 
 ✅ Carrinho funcionando
@@ -79,6 +92,8 @@ npx playwright test
 ✅ Checkout funcionando
 
 ✅ Todos os testes executando com sucesso
+
+-----------------------------
 
 📸 Evidências
 As evidências dos testes estão disponíveis na pasta:
@@ -92,6 +107,9 @@ Carrinho
 
 Checkout
 Checkout
+
+-----------------------------
+
 
 👩‍💻 Autora
 Maria Eduarda Dias
