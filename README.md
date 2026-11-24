@@ -1,8 +1,16 @@
-# Automação de Testes E2E - SauceDemo
+🚀 Projeto de Automação de Testes - SauceDemo com Playwright
 
-## Objetivo
+📖  Objetivo
 
 Projeto desenvolvido para um processo seletivo de QA com o objetivo de estruturar uma automação básica de testes E2E utilizando **Playwright**, **TypeScript** e o padrão **Page Object Model (POM)** sobre a aplicação [SauceDemo](https://www.saucedemo.com/).
+
+🛠️ Tecnologias Utilizadas
+
+- Node.js
+- TypeScript
+- Playwright
+- Page Object Model (POM)
+- Git e Github
 
 A suíte cobre os seguintes fluxos:
 
