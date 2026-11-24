@@ -1,90 +1,98 @@
-🚀 Projeto de Automação de Testes - SauceDemo com Playwright
+🚀 Projeto de Automação de Testes - SauceDemo
+Automação de testes E2E utilizando Playwright, TypeScript e o padrão Page Object Model (POM).
 
-📖  Objetivo
+📋 Descrição
+Este projeto foi desenvolvido para validar fluxos críticos da aplicação SauceDemo.
 
-Projeto desenvolvido para um processo seletivo de QA com o objetivo de estruturar uma automação básica de testes E2E utilizando **Playwright**, **TypeScript** e o padrão **Page Object Model (POM)** sobre a aplicação [SauceDemo](https://www.saucedemo.com/).
+Foram implementados cenários automatizados para:
 
-🛠️ Tecnologias Utilizadas
+ - Login de usuário
+ - Adição de produtos ao carrinho
+ - Validação do checkout
+ - Verificação do resumo da compra
 
-- Node.js
-- TypeScript
-- Playwright
-- Page Object Model (POM)
-- Git e Github
+🛠️ Tecnologias Utilizadas:
 
-A suíte cobre os seguintes fluxos:
-
-- Login com sucesso
-- Adição de um produto ao carrinho
-- Validação das informações no checkout
-
-As evidências de cada cenário são capturadas automaticamente e salvas dentro do projeto.
-
-## Estrutura do projeto
-
-```text
+ - Node.js
+ - TypeScript
+ - Playwright
+ - Page Object Model (POM)
+ - Git
+ - GitHub
+   
+📁 Estrutura do Projeto
+automation/
+│
 ├── evidencias/
 │   ├── login-sucesso.png
 │   ├── produto-carrinho.png
 │   └── checkout-resumo.png
+│
 ├── pages/
 │   ├── LoginPage.ts
 │   ├── InventoryPage.ts
 │   ├── CartPage.ts
 │   └── CheckoutPage.ts
+│
 ├── tests/
 │   ├── login.spec.ts
 │   ├── cart.spec.ts
 │   └── checkout.spec.ts
+│
 ├── package.json
-└── playwright.config.ts
-```
+├── playwright.config.ts
+└── README.md
 
-### O que cada parte faz
+✅ Casos de Teste Implementados
 
-- **`pages/`**: concentra as classes de Page Object, separando seletores e ações de interface da lógica de validação dos testes.
-  - `LoginPage.ts`: abre a página inicial e realiza o preenchimento de usuário, senha e envio do formulário de login.
-  - `InventoryPage.ts`: localiza produtos no catálogo pelo nome, obtém o preço exibido, adiciona itens ao carrinho e abre a página do carrinho.
-  - `CartPage.ts`: consulta os itens e preços presentes no carrinho e aciona o botão para avançar ao checkout.
-  - `CheckoutPage.ts`: preenche os dados do comprador e fornece acesso às informações exibidas no resumo do pedido (item, pagamento, entrega, subtotal, imposto e total).
-- **`tests/`**: contém os arquivos de teste responsáveis pelas asserções de cada fluxo.
-  - `login.spec.ts`: valida o login com o usuário padrão e o redirecionamento para a listagem de produtos.
-  - `cart.spec.ts`: valida a adição de um produto ao carrinho, a atualização do contador e a consistência de nome e preço no carrinho.
-  - `checkout.spec.ts`: valida no resumo do checkout o produto selecionado, preço, informações de pagamento/entrega e o cálculo de subtotal + imposto = total.
-- **`evidencias/`**: pasta onde são salvos os screenshots capturados ao final de cada teste (`login-sucesso.png`, `produto-carrinho.png` e `checkout-resumo.png`).
-- **`playwright.config.ts`**: define a URL base da aplicação, o atributo `data-test` como identificador de testes, o navegador Chromium e o formato do relatório no terminal.
-- **`package.json`**: declara as dependências do projeto (`@playwright/test`) e o script de execução (`npm test`).
+🔐 Login
+Login com credenciais válidas
+Redirecionamento para página de produtos
+🛒 Carrinho
+Adicionar produto ao carrinho
+Validar quantidade de itens
 
-## Instalação e execução
+📦 Checkout
 
-### Pré-requisitos
+Preencher informações do cliente
+Validar resumo do pedido
+Finalizar compra com sucesso
 
-- [Node.js](https://nodejs.org/) versão 18 ou superior (o `npm` já é instalado junto com o Node).
+🚀 Como Executar os Testes
 
-### Passo a passo
-
-1. Abra o terminal na pasta raiz do projeto:
-
-```bash
-cd automation
-```
-
-2. Instale as dependências do projeto:
-
-```bash
+1️⃣ Clonar o projeto
+git clone https://github.com/MariaEduardaFDias/desafio-automacao-playwright.git
+2️⃣ Entrar na pasta
+cd desafio-automacao-playwright
+3️⃣ Instalar dependências
 npm install
-```
+4️⃣ Instalar navegadores do Playwright
+npx playwright install
+5️⃣ Executar os testes
+npx playwright test
+📊 Resultado dos Testes
+✅ Login funcionando
 
-3. Instale o navegador Chromium utilizado pelo Playwright:
+✅ Carrinho funcionando
 
-```bash
-npx playwright install chromium
-```
+✅ Checkout funcionando
 
-4. Execute os testes:
+✅ Todos os testes executando com sucesso
 
-```bash
-npm test
-```
+📸 Evidências
+As evidências dos testes estão disponíveis na pasta:
 
-Ao concluir a execução, o resultado é exibido no terminal e as capturas de tela ficam registradas na pasta `evidencias/`.
+evidencias/
+Login
+Login
+
+Carrinho
+Carrinho
+
+Checkout
+Checkout
+
+👩‍💻 Autora
+Maria Eduarda Dias
+
+GitHub: 👉 https://github.com/MariaEduardaFDias
